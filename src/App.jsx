@@ -13,20 +13,27 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <HomeLayout />
+      element: <HomeLayout />,
+      errorElement: <Error />,
+      children:[
+        {
+          element: <Landing />,
+          index: true,
+        },
+        {
+          path: 'login',
+          element: <Login />
+        },
+        {
+          path: 'register',
+          element: <Register />
+        },
+        {
+          path: 'dashboard',
+          element: <DashboardLayout />
+        }
+      ]
     },
-    {
-      path: '/login',
-      element: <Login />
-    },
-    {
-      path: '/register',
-      element: <Register />
-    },
-    {
-      path: '/dashboard',
-      element: <DashboardLayout />
-    }
   ])
   return (
     <RouterProvider router={router}/>
