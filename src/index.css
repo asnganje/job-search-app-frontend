@@ -2,3 +2,84 @@
   margin: 0;
   padding: 0;
 }
+
+.landing-wrapper {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.landing-wrapper nav{
+  width: 90vw;
+  max-width: 1120px;
+  margin: 0 auto;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 10rem;
+  height: 8rem;
+  margin-top: 3rem;
+  display: block;
+  object-fit: cover;
+}
+
+.page {
+  min-height: calc(100vh - 6rem);
+  display: grid;
+  margin-top: 5rem;
+}
+
+.info h1 {
+  font-weight: 700;
+}
+
+.info span {
+  color: #2cb1bc;
+  margin-bottom: 1.5rem;
+}
+
+.info p {
+  line-height: 2;
+  margin-bottom: 1.5rem;
+  color:  #64748b;
+  max-width: 35em;
+}
+
+.main-img {
+  display: none;
+}
+
+.register-link {
+  margin-right: 1rem;
+}
+
+.btn {
+  cursor: pointer;
+  color: #fff;
+  background: #2cb1bc;
+  border: transparent;
+  border-radius: 0.25rem;
+  letter-spacing: 1px;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out all;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+@media (min-width: 992px) {
+  .page{
+    grid-template-columns: 1fr 400px;
+    column-gap: 3rem;
+  }
+
+  .main-img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+}
