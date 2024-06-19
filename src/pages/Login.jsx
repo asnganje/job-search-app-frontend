@@ -5,7 +5,9 @@ const Login = () => {
   return(
     <section className="form-wrapper">
       <form className="form">
-        <Logo className = "logo"/>
+        <Link to="/">
+            <Logo className = "logo"/>
+        </Link>
         <h4>Login</h4>
         <FormRow type="email" name="email"/>
         <FormRow type="password" name="password"/>

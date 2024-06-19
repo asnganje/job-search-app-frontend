@@ -1,12 +1,17 @@
-import { Link } from "react-router-dom";
+import {Link, NavLink } from "react-router-dom";
 import { Logo } from "../components";
 import main from '../assets/main.svg'
 
 const Landing = () => {
   return(
     <section className="landing-wrapper">
-      <nav>
-          <Logo />
+      <nav className="landing-nav">
+          <NavLink to="/">
+              <Logo className="logo" />
+          </NavLink>
+          <div>
+              <Link to='/dashboard' className="btn">Go to Dashboard</Link>
+          </div>
       </nav>
       <div className="landing-container page">
         <div className="info">
@@ -24,8 +29,10 @@ const Landing = () => {
           job search journey with our cutting-edge technology and take the 
           next step towards your dream job with confidence and ease.
           </p>
-          <Link to='/register' className="btn register-link">Register</Link>
-          <Link to='/login' className="btn">Login</Link>
+              <div>
+                <Link to='/register' className="btn register-link">Register</Link>
+                <Link to='/login' className="btn">Login</Link>
+              </div>
         </div>
         <img src={main} alt="job hunt" className="main-img"/>
       </div>

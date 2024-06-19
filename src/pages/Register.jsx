@@ -4,7 +4,9 @@ const Register = () => {
   return(
     <section className="form-wrapper">
       <form className="form">
-          <Logo className = "logo"/>
+          <Link to="/">
+              <Logo className = "logo"/>
+          </Link>
           <h4>Register</h4>
             <FormRow type="text" name="name"/>
             <FormRow type="text" labelText="Last Name"/>

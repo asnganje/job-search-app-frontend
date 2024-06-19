@@ -74,6 +74,15 @@ body{
   display: inline-block;
 }
 
+.landing-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.landing-nav logo {
+  cursor: pointer;
+}
+
 @media (min-width: 992px) {
   .page{
     grid-template-columns: 1fr 400px;
@@ -128,6 +137,7 @@ body{
   display: block;
   margin: 0 auto;
   margin-bottom: 1.5rem;
+  cursor: pointer;
 }
 
 .form {
@@ -235,11 +245,17 @@ body{
   align-items: center;
 }
 
+@media (min-width: 992px) {
+  .toggle-btn {
+    display: none;
+  }
+}
 .logo-control .logo{
   display: flex;
   align-items: center;
   width: 100%;
   margin-top: 0;
+  cursor: pointer;
 }
 
 .logo-text {
@@ -349,4 +365,61 @@ body{
 
 .active {
   color: #2cb1bc;
+}
+
+.bg-sidebar-wrapper {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .bg-sidebar-wrapper {
+    display: block;
+    box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .bg-sidebar-container{
+    background: #fff;
+    min-height: 100vh;
+    height: 100%;
+    width: 250px;
+    margin-left: -250px;
+  } 
+
+  .bg-content {
+    position: sticky;
+  }
+
+  .show-sidebar {
+    margin-left: 0;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    padding: 2.5rem;
+    padding-top: 0;
+  }
+
+  .bg-nav-links {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bg-nav-link {
+    display: flex;
+      align-items: center;
+      color: #64748b;
+      padding: 1rem 0;
+      padding-left: 2.5rem;
+      text-transform: capitalize;
+      transition: padding-left 0.3s ease-in-out;
+  }
+
+  .bg-nav-link:hover {
+    padding-left: 3rem;
+    color: #2cb1bc;
+  }
+
 }
