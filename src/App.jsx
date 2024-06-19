@@ -5,7 +5,12 @@ import {
         Login,
         Register,
         DashboardLayout,
-        Error
+        Error,
+        AddJob,
+        AllJobs,
+        Profile,
+        Stats,
+        Admin
 } from './pages'
 
 function App() {
@@ -30,7 +35,29 @@ function App() {
         },
         {
           path: 'dashboard',
-          element: <DashboardLayout />
+          element: <DashboardLayout />,
+          children: [
+            {
+              index: true,
+              element: <AddJob />
+            },
+            {
+              path: 'stats',
+              element: <Stats />
+            },
+            {
+              path: 'all-jobs',
+              element: <AllJobs />
+            },
+            {
+              path: 'profile',
+              element: <Profile />
+            },
+            {
+              path: 'admin',
+              element: <Admin />
+            },
+          ]
         }
       ]
     },
