@@ -1,6 +1,6 @@
 const FormRow = ({type,name, labelText}) => {
   return(
-    <div className="form-row">
+    <div className="add-job-form-row">
             <label htmlFor={name} className="form-label">{labelText || name}</label>
             <input 
               type={type} 
