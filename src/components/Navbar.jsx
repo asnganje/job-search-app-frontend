@@ -17,7 +17,7 @@ const Navbar = () => {
         </NavLink>
         <h4 className="logo-text">dashboard</h4>
       </div>
-      <div className="btn-container">toggle/logout</div>
+      <Link to="/" className="btn">toggle-logout</Link>
       </div>
     </nav>
   )
