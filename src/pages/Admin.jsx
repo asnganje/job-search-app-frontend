@@ -1,7 +1,7 @@
 const Admin = () => {
   return(
     <div>
-      Admin Page
+       <h2 style={{color: 'red'}}>Only admin can access the content...!</h2>
     </div>
   )
 }
